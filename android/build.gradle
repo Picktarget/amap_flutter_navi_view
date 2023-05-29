@@ -1,0 +1,43 @@
+group 'com.stack.amap_flutter_navi_view'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+apply from: "./resolve_dependencies.gradle"
+
+android {
+    compileSdkVersion 31
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    dependencies {
+//        implementation 'com.amap.api:3dmap:9.2.0'
+//        implementation 'com.amap.api:search:9.5.0'
+//        implementation 'com.amap.api:navi-3dmap:9.6.0_3dmap9.6.0'
+        implementation 'com.amap.api:navi-3dmap:8.1.0_3dmap8.1.0'
+    }
+}
+
